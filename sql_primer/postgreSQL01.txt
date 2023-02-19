@@ -1,0 +1,62 @@
+PostgreSQL
+
+Debian includes PostgreSQL by default
+$ sudo apt install postgresql-13
+$ sudo apt install pastgresql
+$ sudo apt install postgresql-client
+$ sudo apt install postgresql-doc
+
+
+Рекомендуемые пакеты:
+postgresql-doc - документация.
+pgadmin3 - PostgreSQL administration GUI.
+phppgadmin - веб-интерфес для утилит администратора
+
+Проверить активность PostgreSQL:
+$ systemctl status postgresql
+
+После установки PostgreSQL, когда еще не заведены пользователи:
+$ su
+# su - postgres
+postgres@raf-pc:~$ psql
+
+psql - это утилита, консоль для входа в PostgreSQL
+Выход из консоли:
+postgres=# \q
+
+https://youtu.be/wWJAE3gZIvM
+
+Задать пароль для пользователя postgres:
+postgres=# \password postgres
+
+Под пользователем postgres работать крайне нежелательно.
+Создаем пользователя:
+postgres=# create user <username> with password 'passwordText';
+postgres=# create user raf with password 'qwq121';
+
+Creating database (DB):
+postgres=# create database <databaseName>;
+postgres=# create database test_db;
+
+Дадим права на управление DB нашему новому пользователю:
+postgres=# grant all privileges on database <databaseName> to <username>;
+postgres=# grant all privileges on database test_db to raf;
+
+Подключение к PostgreSQL от имени нового пользователя:
+$ psql -h localhost test_db raf
+
+По умолчанию PostgreSQL прослушивает только localhost
+При необходимости нужно указать какие сетевые интерфейсы буде прослушивать
+PostgreSQL.
+Это делается в файле /etc/postgresql/13/main/postgresql.conf
+в разделе CONNECTIONS AND AUTHENTICATION
+Находим строку (закомментированную по умолчанию)
+listen_addreses = 'localhost' и меняем
+listen_addreses = '*' - прослушивает все (?)
+listen_addreses = 'IP нужного интерфейса'
+
+При установке пакета PostgreSQL создается административный пользователь с
+именем «postgres». По умолчанию этот пользователь может подключаться к
+локальному серверу PostgreSQL без пароля.
+Чтобы получить доступ к терминалу psql от имени пользователя postgres, запустите:
+$ sudo -u postgres psql
