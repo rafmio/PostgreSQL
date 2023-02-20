@@ -1,2 +1,6 @@
 Список все таблиц и представлений (views):
 \dt
+
+Run psql (Ubuntu):
+$ sudo -i -u postgres
+$ psql

@@ -1,0 +1,7 @@
+#data bases:
+*.dat
+*.sql
+
+#archives:
+*.zip
+*.tar
