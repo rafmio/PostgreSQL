@@ -1,6 +1,52 @@
+Источники:
+https://blog.programs74.ru/getting-started-with-postgresql-10/
+
 Список все таблиц и представлений (views):
 \dt
 
-Run psql (Ubuntu):
-$ sudo -i -u postgres
-$ psql
+Переключиться на нужную базу:
+username=# \c DBName
+postgres=# \c budgeting
+
+
+
+1.Вход в psql. Варианты:
+      ----------------------------
+      Run psql (Ubuntu):
+      $ sudo -i -u postgres
+      $ psql
+
+      ----------------------------
+      После установки PostgreSQL, когда еще не заведены пользователи:
+      $ su
+      # su - postgres
+      postgres@raf-pc:~$ psql
+
+      ----------------------------
+      Войти в шаблонную базу template1
+      $ su
+      # su - postgres
+      $ psql -Upostgres template1
+
+
+
+2.Просмотр существующих БД:
+      ----------------------------
+      Вариант 1:
+      postgres=# \l
+
+      Вариант 2:
+      postgres=# select datname FROM pg_database;
+
+      Вариант 3:
+      извне psql, в терминале, в командной строке:
+      $ psql -l
+
+3.Выбор пользователя
+      ----------------------------
+      войти в базу,
+      =# select * from pg_user;
+
+      ----------------------------
+      просмотр ролей:
+      \du
