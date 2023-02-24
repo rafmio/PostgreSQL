@@ -4,7 +4,7 @@ https://blog.programs74.ru/getting-started-with-postgresql-10/
 Список все таблиц и представлений (views):
 \dt
 
-Переключиться на нужную базу:
+# Switch to a specific database:
 username=# \c DBName
 postgres=# \c budgeting
 
@@ -48,5 +48,18 @@ postgres=# \c budgeting
       =# select * from pg_user;
 
       ----------------------------
-      просмотр ролей:
+      просмотр пользователей (? ролей):
       \du
+
+----------------------------
+      # Show database file on disk:
+      DBName=# show data_directory;
+----------------------------
+
+# Database import (импорт готовой БД)
+# Database restore (восстановление БД)
+# Логинимся под пользователя postgres:
+$ su             # залогинились под root
+$ su - postgres  # из-под рута (root) залогинились под учетку postgres
+postgres@raf-pc:~$ pg_restore --dbname=baseName --verbose /path/to/fileWithDB.tar
+postgres@raf-pc:~$ pg_restore --dbname=dvdrental --verbose dvdrental.tar
