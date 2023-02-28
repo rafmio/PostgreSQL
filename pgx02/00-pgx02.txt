@@ -1,1 +1,3 @@
 https://medium.com/geekculture/work-with-go-postgresql-using-pgx-caee4573672
+
+https://github.com/bijeshos/go-postgresql-pgx-example/blob/main/main.go
