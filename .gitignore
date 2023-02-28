@@ -5,3 +5,7 @@
 #archives:
 *.zip
 *.tar
+
+#modes
+*.mod
+*.sum
