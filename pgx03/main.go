@@ -66,5 +66,7 @@ func AddTransaction(dpPool *pgxpool.Pool) {
 	fmt.Printf("Comment: ")
 	fmt.Scanf("%s", entry.comment)
 
-	queryText := fmt.Sprintf("INSERT INTO transactions(account, trdate, trtype, docdate, docnumb, counterpary, cntp_tax_id, cntp_contract, purpose, comment, direction, amount, item) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %.2f, %s)")
+	queryText := fmt.Sprintf("INSERT INTO transactions(account, trdate, trtype, docdate, docnumb, counterpary, cntp_tax_id, cntp_contract, purpose, comment, direction, amount, item) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %.2f, %s)",
+		entry.account, entry.trdate, entry.trtype, entry.docdate, entry.docnumb, entry.counterparty, entry.cntp_tax_id, entry.cntp_contract, entry.purpose, entry.comment, entry.direction, entry.item)
+
 }
