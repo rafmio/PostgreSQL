@@ -26,7 +26,7 @@ func ConnectDB(entry AccountEntry) {
 		os.Exit(1)
 	}
 
-	defer dbPool.Close()
+	defer dbPool.Close(context.Background())
 
 	// execute insert query
 	ExecuteInsertAccountQuery(dbPool, entry)
