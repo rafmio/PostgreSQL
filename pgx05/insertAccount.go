@@ -1,3 +1,4 @@
+// https://donchev.is/post/working-with-postgresql-in-go-using-pgx/
 package main
 
 import (
@@ -29,7 +30,7 @@ func NewPG(ctx context.Context, connString string) (*postgres, error) {
 	pgOnce.Do(func() {
 		db, err := pgxpool.New(ctx, connString)
 		if err != nil {
-			return fmt.Errorf("unable to establish connection pool: %w", err.Error())
+			return fmt.Errorf("unable to establish connection pool: %w", err)
 		}
 		pgInstance = &postgres{db}
 	})
