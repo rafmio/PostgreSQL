@@ -7,7 +7,7 @@ import (
 	"github.com/jackc/pgx/v4"
 )
 
-// postgres://postgres:qwq121@localhost:5432/ethcontract
+// TODO: dig to ParseConfig and connection query
 
 type AccountEntry struct {
 	AccNumber string
