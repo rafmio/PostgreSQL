@@ -1,0 +1,12 @@
+$ sudo -i -u postgres 			- switch to postgres user
+$ psql               			- run psql
+
+postgres=# \l				- list databases 
+postgres=# CREATE DATABASE db_name;	- create database
+
+postgres=# CREATE DATABASE test_base
+postgres-# 	WITH ENCODING='UTF8'
+postgres-#	OWNER=raf
+posrgres-#	CONNECTION LIMINT=30;
+
+

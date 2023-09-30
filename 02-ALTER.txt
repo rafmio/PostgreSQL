@@ -1,0 +1,4 @@
+ALTER
+
+postgres=# ALTER DATABASE target_base RENAME TO new_name;
+posrgres=# ALTER DATABASE target_base OWNER TO new_owner; 
