@@ -2,3 +2,10 @@ ALTER
 
 postgres=# ALTER DATABASE target_base RENAME TO new_name;
 posrgres=# ALTER DATABASE target_base OWNER TO new_owner; 
+
+Change the default tablespace of my_dbase to geeks_default:
+
+postgres=# ALTER DABASE my_dbase
+		SET TABLESPACE geeks_default;
+
+

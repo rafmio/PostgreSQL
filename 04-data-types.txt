@@ -1,0 +1,13 @@
+Data types:
+
+- boolean
+- character (char, varchar, text)
+- numeric (int, float)
+- temporal (date, time, timestamp, interval)
+- UUID (for storing UUID)
+- array
+- JSON
+- hstore (key-value pair)
+- special (network address and geometric data)
+
+

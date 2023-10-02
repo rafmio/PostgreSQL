@@ -1,0 +1,11 @@
+Roles, users
+
+Create role and set attributes:
+postgres=# CREATE ROLE geeks
+postgres-#	VALID UNTIL 'infinity';
+
+List roles:
+postgres=# \du;
+postgres=# \du
+
+
