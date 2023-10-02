@@ -1,0 +1,15 @@
+
+CREATE TABLE varchar_test (
+	id serial PRIMARY KEY,
+	x VARCHAR (1),
+	y VARCHAR (10)
+);
+
+INSERT INTO varchar_test (x, y)
+VALUES
+	(
+		'G',
+		'hello Geeks'
+	);
+
+SELECT * FROM varchar_test;

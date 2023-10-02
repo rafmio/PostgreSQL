@@ -1,1 +1,1 @@
-https://www.geeksforgeeks.org/postgresql-alter-database/
+https://www.geeksforgeeks.org/postgresql-varchar-data-type/

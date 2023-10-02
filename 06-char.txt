@@ -1,0 +1,18 @@
+CREATE TABLE char_test (
+	id serial PRIMARY KEY,
+	x CHAR (1),
+	y CHAR (10),
+);
+
+
+INSERT INTO char_test (x, y)
+VALUES
+	(
+		'G',
+		'hello Geek'
+	);
+
+SELECT * FROM char_test;
+
+
+

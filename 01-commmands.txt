@@ -3,12 +3,6 @@ $ psql               			- run psql
 
 postgres=# \l				- list databases 
 postgres=$ \l+				
-postgres=# CREATE DATABASE db_name;	- create database
-
-postgres=# CREATE DATABASE test_base
-postgres-# 	WITH ENCODING='UTF8'
-postgres-#	OWNER=raf
-posrgres-#	CONNECTION LIMINT=30;
 
 List all databases present on the server:
 postgres=# SELECT datname FROM pg_database;
