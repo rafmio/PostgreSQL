@@ -7,6 +7,7 @@ postgres=$ \l+
 List all databases present on the server:
 postgres=# SELECT datname FROM pg_database;
 
-
+Switch between DBs:
+\connect DBNAME;
 
 
