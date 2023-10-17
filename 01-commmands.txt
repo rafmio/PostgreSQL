@@ -10,4 +10,19 @@ postgres=# SELECT datname FROM pg_database;
 Switch between DBs:
 \connect DBNAME;
 
+INSERT INTO table-name (column-name) VALUES ('value');
+INSERT INTO logentries (datetime)    VALUES  (NOW());
+INSERT INTO logentries (datetime) VALUES ('2023-10-17 11:33:10');
+FROM tagle-name SELECT column-name;
+FROM logentries SELECT datetime;
+
+SELECT * FROM table-name;
+SELECT * FROM logentries;
+
+mydatabase=# UPDATE users 
+mydatabase-# SET ip = '194.58.102.129'
+mydatabase-# WHERE id = 1;
+UPDATE 1
+
+
 
