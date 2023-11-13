@@ -1,1 +1,1 @@
-https://www.postgresqltutorial.com
+https://dev.to/kushagra_mehta/postgresql-with-go-in-2021-3dfg
